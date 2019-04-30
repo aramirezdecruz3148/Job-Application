@@ -14,6 +14,7 @@ test('creates applicant from form data', (assert) => {
         uniqueWandTraits: 'My wand is fancy as hell.'
     };
 
+    //calling in my form data that I am using
     const formData = new FormData();
     formData.set('name', expected.name);
     formData.set('registry-reason', expected.registryReason);

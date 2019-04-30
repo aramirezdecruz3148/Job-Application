@@ -1,4 +1,5 @@
 function getForm(formData) {
+    //converting my boolean and number values from strings to a number and boolean value
     const lawfullyObtained = formData.get('lawfully-obtained') === 'yes';
     const wandLength = parseInt(formData.get('wand-length'));
 
