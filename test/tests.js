@@ -1,6 +1,6 @@
 const test = QUnit.test;
 
-function getApplicant(formData) {
+function getForm(formData) {
     const lawfullyObtained = formData.get('lawfully-obtained') === 'yes';
     const wandLength = parseInt(formData.get('wand-length'));
 
@@ -41,8 +41,8 @@ test('creates applicant from form data', (assert) => {
     formData.set('unique-wand-traits', expected.uniqueWandTraits);
     //Act 
     // Call the function you're testing and set the result to a const
-    const applicant = getApplicant(formData);
+    const form = getForm(formData);
 
     //Assert
-    assert.deepEqual(applicant, expected);
+    assert.deepEqual(form, expected);
 });
