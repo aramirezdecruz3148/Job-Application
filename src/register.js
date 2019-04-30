@@ -1,4 +1,5 @@
 import getForm from './get-form.js';
+import formApi from './form-api.js';
 //selecting nodes I want to use
 const wandRegistrationForm = document.getElementById('wand-registration-form');
 
@@ -15,5 +16,6 @@ wandRegistrationForm.addEventListener('submit', (event) => {
     event.preventDefault();   
     const formData = new FormData (wandRegistrationForm);
     const form = getForm(formData);
-    console.log(form);
+    //replaced console log with a call to API object to save the API data
+    formApi.save(form);
 });
