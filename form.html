@@ -5,9 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./src/styles.css">
-    <title>Document</title>
+    <title>Form to register your wand with the ministry of magic</title>
 </head>
 <body>
+    <main>
+        <head>
+            <img id="logo" src="assets/ministry-logo.jpg" alt="ministry of magic logo">
+            <h1>Official form to register your wand with the Ministry of Magic</h1>
+        </head>
+        <form id="wand-registration-form">
+            <section>
+                <p>
+                    <label class="stacked-label" for="name">Name of Witch/Wizard:</label>
+                    <input class="text-input" type="text" name="name" id="name" placeholder="Your name" required>
+                </p>
+            </section>
+            <section>
+                <fieldset>
+                    <legend>
+                        Reason for registering your wand (please check all that apply):
+                    </legend>
+                        <div>
+                            <input name="registry-reason" value="of-age" type="checkbox" id="of-age">
+                            <label for="registy-reason">Just came of age.</label>
+                        </div>
+                        <div>
+                            <input name="registry-reason" value="new-to-country" type="checkbox" id="new-to-country">
+                            <label for="registy-reason">I am new to the country.</label>
+                        </div>
+                        <div>
+                            <input name="registry-reason" value="new-wand" type="checkbox" id="new-wand">
+                            <label for="registy-reason">I purchased a new wand.</label>
+                        </div>
+                </fieldset>
+            </section>
+            <section>
+                <fieldset> 
+                    <legend>
+                        Did you lawfully obtain your wand from a <em>licensed</em> vendor?
+                    </legend>
+                        <div>
+                            <input name="lawfully-obtained" value="yes" type="radio" id="yes">
+                            <label for="lawfully-obtained">Yes.</label>
+                        </div>
+                        <div>
+                                <input name="lawfully-obtained" value="no" type="radio" id="no">
+                                <label for="lawfully-obtained">No.</label>
+                        </div>
+                    </fieldset>
+             </section>   
+        </form>
+    </main>
+
     <script type="module" src="src/app.js"></script> 
 </body>
 </html>
