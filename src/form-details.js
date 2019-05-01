@@ -20,7 +20,7 @@ if(!form) {
 }
 //mediate data into the elements
 name.textContent = form.name;
-registryReason.textContent = form.registryReason;
+registryReason.textContent = form.registryReason.join(', ');
 lawfullyObtained.textContent = form.lawfullyObtained;
 wandCore.textContent = form.wandCore;
 wandWood.textContent = form.wandWood;

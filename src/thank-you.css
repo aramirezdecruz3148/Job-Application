@@ -18,3 +18,7 @@ p {
     float: right;
     width: 250px;
 }
+
+#link {
+    margin-left: -105%;
+}
