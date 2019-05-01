@@ -1,17 +1,30 @@
 const formApi = {
     save(form) {
+    //get our form array
+        const forms = formApi.getAll(); 
+    //add this form to the array
+        forms.push(form);
     //serialize to JSON
-        const json = JSON.stringify(form);
+        const json = JSON.stringify(forms);
     //save to local storage
-        localStorage.setItem('form', json);
+        localStorage.setItem('forms', json);
     },
     get() {
-    //get from local storage
-        const json = localStorage.getItem('form');
-    //deserialize to object
-        const form = JSON.parse(json);
+    //use get all to fetch forms
+        const forms = formApi.getAll(); 
     //return it
-        return form;
+        return forms[0];
+    },
+    getAll() {
+    //get from local storage
+        const json = localStorage.getItem('forms');
+    //deserialize to object
+        let forms = JSON.parse(json);
+        if(!forms) {
+            forms = [];
+        }
+
+        return forms;
     }
 };
 
