@@ -18,4 +18,6 @@ wandRegistrationForm.addEventListener('submit', (event) => {
     const form = getForm(formData);
     //replaced console log with a call to API object to save the API data
     formApi.save(form);
+    //redirecting to the thank you page
+    window.location.href = 'thank-you.html';
 });
