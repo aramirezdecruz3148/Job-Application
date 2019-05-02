@@ -6,6 +6,7 @@ table {
     border-spacing:5em;
     border: #CDA21F solid 3px;
     margin-top: 6%;
+    text-align: center;
 }
 
 thead {
@@ -16,6 +17,7 @@ thead {
 
 td {
     padding: 8px 5px;
+    border: #CDA21F solid 3px;
 }
 
 tbody {
