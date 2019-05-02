@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing:5em;
+    border: #CDA21F solid 3px;
+    margin-top: 6%;
+}
+
+thead {
+    font-weight: bolder;
+    color: white;
+    background: #37475F;
+}
+
+td {
+    padding: 8px 5px;
+}
+
+tbody {
+    font-size: .8em;
+}
