@@ -18,7 +18,7 @@ const formApi = {
     },
     getAll() {
     //get from local storage
-        const json =formApi.storage.getItem('forms');
+        const json = formApi.storage.getItem('forms');
     //deserialize to object
         let forms = JSON.parse(json);
         if(!forms) {
