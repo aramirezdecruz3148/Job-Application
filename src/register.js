@@ -2,12 +2,7 @@ import getForm from './get-form.js';
 import formApi from './form-api.js';
 //selecting nodes I want to use
 const wandRegistrationForm = document.getElementById('wand-registration-form');
-const music = document.getElementById('music');
 
-//attempting to add sound event listener
-music.addEventListener('loadstart', function() {
-    music.play();
-});
 
 // echo range for wand length in numeric display
 const wandRange = document.getElementById('wand-length');
@@ -29,3 +24,4 @@ wandRegistrationForm.addEventListener('submit', (event) => {
     var audio = new Audio('./assets/hp-theme.mp3');
     audio.play();
 });
+
