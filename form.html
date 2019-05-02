@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./src/styles.css">
+    <title>Form to register your wand with the ministry of magic</title>
+</head>
+<body>
+    <main>
+        <head>
+            <h1><img id="large-logo" src="assets/Ministry.png" alt="ministry of magic logo">Official Ministry form to register your wand</h1>
+        </head>
+        <form id="wand-registration-form">
+            <section>
+                <p>
+                    <label class="stacked-label" for="name">Name of Witch/Wizard:</label>
+                    <input class="text-input" type="text" name="name" id="name" placeholder="Your name" required>
+                </p>
+            </section>
+            <section>
+                <fieldset>
+                    <legend>
+                        Reason for registering your wand (please check all that apply):
+                    </legend>
+                        <div>
+                            <input name="registry-reason" value="of-age" type="checkbox" id="of-age">
+                            <label for="registy-reason">Just came of age.</label>
+                        </div>
+                        <div>
+                            <input name="registry-reason" value="new-to-country" type="checkbox" id="new-to-country">
+                            <label for="registy-reason">I am new to the country.</label>
+                        </div>
+                        <div>
+                            <input name="registry-reason" value="new-wand" type="checkbox" id="new-wand">
+                            <label for="registy-reason">I purchased a new wand.</label>
+                        </div>
+                </fieldset>
+            </section>
+            <section>
+                <fieldset> 
+                    <legend>
+                        Did you lawfully obtain your wand from a <em>licensed</em> maker?
+                    </legend>
+                        <div>
+                            <input name="lawfully-obtained" value="yes" type="radio" id="yes">
+                            <label for="lawfully-obtained">Yes.</label>
+                        </div>
+                        <div>
+                                <input name="lawfully-obtained" value="no" type="radio" id="no">
+                                <label for="lawfully-obtained">No.</label>
+                        </div>
+                    </fieldset>
+            </section>
+            <section>
+                <label class="wand-core" for="wand-core">What is the core of your wand?</label>
+                    <select id="wand-core" name="wand-core" required>
+                        <option value="" hidden disabled selected>Select a core</option>
+                        <option value="unicorn-tail-hair">Unicorn Tail Hair</option>
+                        <option value="dragon-heart-string">Dragon Heart String</option>
+                        <option value="phoenix-tail-feather">Phoenix Tail Feather</option>
+                        <option value="thestral-tail-hair">Thestral Tail Hair</option>
+                    </select>
+            </section> 
+            <section>
+                <label class="wand-wood" for="wand-wood">What wood is your wand made from?</label>
+                    <select id="wand-wood" name="wand-wood" required>
+                        <option value="" hidden disabled selected>Select a type of wood</option>
+                        <option value="alder">Alder</option>
+                        <option value="ash">Ash</option>
+                        <option value="beech">Beech</option>
+                        <option value="holly">Holly</option>
+                        <option value="blackthorn">Blackthorn</option>
+                    </select>
+            </section> 
+            <section>
+                <p>
+                    <label for="wand-length">Please indicate the length of your wand in inches:</label>
+                    <input type="range" name="wand-length" id="wand-length" min="1" max="15" required>
+                    <span id="range-display">5</span>
+                </p>
+            </section>
+            <section>
+                <p>
+                    <label class="unique-wand-traits" for="unique-wand-traits">
+                    Describe any unique characteristics of your wand (decoration, handes, polishes, damage, etc):
+                    </label>
+                    <textarea name="unique-wand-traits" id="unique-wand-traits"></textarea>
+                </p>
+            </section>
+            <section>
+                <h2>Check your answers are correct before submitting!</h2>
+                    <button id="submit-button">Send to the Ministry</button>
+                </section>
+        </form>
+    </main>
+    <script type="module" src="src/register.js"></script> 
+</body>
+</html>

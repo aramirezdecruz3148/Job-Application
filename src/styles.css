@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Unicase');
+
+body{
+    font-family: 'Cormorant Unicase', serif;
+    background-color: #B3C1CE;
+}
+
+form{
+    padding: 10px 30px;
+    text-align: left;
+    width: 90%;
+    margin: auto;
+}
+
+#inline-block{
+    display: inline;
+}
+
+h1{
+    background-color: #CDA21F;
+    border: #37475F solid 2px;
+}
+
+#large-logo{
+    width: 50px;
+    height: auto;
+}
+
+#wand{
+    width: 500px;
+    height: auto;
+}
+
+h2{
+    margin-bottom: .5%;
+}
+
+#unique-wand-traits{
+    height: 100px;
+    width: 350px;
+    margin-top: 20px;
+}
+
+#submit-button {
+    height: 50px;
+    width: 150px;
+    font-size: 1.0em;
+    background-color: #CDA21F;
+    border: #37475F solid 2px;
+}
