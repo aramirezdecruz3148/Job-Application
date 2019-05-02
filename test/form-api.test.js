@@ -2,9 +2,11 @@ import formApi from '../src/form-api.js';
 const test = QUnit.test;
 QUnit.module('form api');
 
+formApi.storage = sessionStorage;
+const testStorage = sessionStorage;
 
 test('round-trip form data', (assert) => {
-    localStorage.removeItem('forms');
+    testStorage.removeItem('forms');
     // arrange
     const form = { name: 'spongebob' };
     // act
@@ -16,7 +18,7 @@ test('round-trip form data', (assert) => {
 
 test('no applicants in local storage, returns an empty array', (assert) => {
     // arrange
-    localStorage.removeItem('forms');
+    testStorage.removeItem('forms');
     const expected = [];
     // act
     const forms = formApi.getAll();
@@ -25,7 +27,7 @@ test('no applicants in local storage, returns an empty array', (assert) => {
 });
 
 test('two saves return array with two items', (assert) => {
-    localStorage.removeItem('forms');
+    testStorage.removeItem('forms');
     // arrange
     const form1 = { name: 'tester1' };
     const form2 = { name: 'tester2' };

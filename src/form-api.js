@@ -1,4 +1,5 @@
 const formApi = {
+    storage: localStorage,
     save(form) {
     //get our form array
         const forms = formApi.getAll(); 
@@ -7,7 +8,7 @@ const formApi = {
     //serialize to JSON
         const json = JSON.stringify(forms);
     //save to local storage
-        localStorage.setItem('forms', json);
+        formApi.storage.setItem('forms', json);
     },
     get() {
     //use get all to fetch forms
@@ -17,7 +18,7 @@ const formApi = {
     },
     getAll() {
     //get from local storage
-        const json = localStorage.getItem('forms');
+        const json =formApi.storage.getItem('forms');
     //deserialize to object
         let forms = JSON.parse(json);
         if(!forms) {
