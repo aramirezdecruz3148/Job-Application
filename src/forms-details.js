@@ -33,6 +33,6 @@ for(let i = 0; i < forms.length; i++) {
     wandWoodCell.textContent = form.wandWood;
     tr.appendChild(wandWoodCell);
 
-    tBody.appendChild('tr');
+    tBody.appendChild(tr);
 }
 
