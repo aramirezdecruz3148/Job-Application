@@ -22,7 +22,8 @@ for(let i = 0; i < forms.length; i++) {
     //Set the key as name and the value as the form.name
     searchParams.set('name', form.name);
     //Use the formatted search string as the end of the link href
-    link.href = 'form.html?' + searchParams.toString();
+    //ALSO this is where we are specifying the detination (list page) for our name link
+    link.href = 'form-details.html?' + searchParams.toString();
     //Also use the form name as the display text for the link
     link.textContent = form.name;
     //Add the link to the name cell
