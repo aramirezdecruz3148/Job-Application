@@ -1,0 +1,29 @@
+
+dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}
+
+dt, dd {
+    display: inline-flex;
+    padding: 8px 10px;
+}
+
+dt {
+    background-color: #37475F;
+    border: #CDA21F solid 2px;
+    font-weight: bolder;
+    color: rgb(197, 197, 197);
+}
+
+dt:after {
+    content: ":";
+}
+
+dd {
+    margin-left: 18px;
+}
+
+#unique-wand-traits {
+    margin-top: -2px;
+}

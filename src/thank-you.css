@@ -1,0 +1,24 @@
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 7%;
+}
+
+#container {
+    width: 400px;
+    margin-left: 22%;
+}
+
+#owl {
+    width: 100px;
+    height: auto;
+    border: #37475F solid 5px;
+}
+
+p {
+    float: right;
+    width: 250px;
+}
+
+#link {
+    margin-left: -105%;
+}
