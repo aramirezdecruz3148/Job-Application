@@ -1,5 +1,6 @@
 import getForm from './get-form.js';
 import formApi from './form-api.js';
+
 //selecting nodes I want to use
 const wandRegistrationForm = document.getElementById('wand-registration-form');
 
