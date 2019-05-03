@@ -23,7 +23,7 @@ for(let i = 0; i < forms.length; i++) {
     searchParams.set('name', form.name);
     //Use the formatted search string as the end of the link href
     link.href = 'form.html?' + searchParams.toString();
-    //Also use the applicant's name as the display text for the link
+    //Also use the form name as the display text for the link
     link.textContent = form.name;
     //Add the link to the name cell
     nameCell.appendChild(link);

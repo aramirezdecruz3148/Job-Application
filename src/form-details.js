@@ -1,7 +1,7 @@
-//import our utility object for getting data
+//Import our utility object for getting data
 import formApi from './form-api.js';
 
-//reference all the DOM elements we need to update
+//Reference all the DOM elements we need to update
 const name = document.getElementById('name');
 const registryReason = document.getElementById('registry-reason');
 const lawfullyObtained = document.getElementById('lawfully-obtained');
@@ -10,15 +10,18 @@ const wandWood = document.getElementById('wand-wood');
 const wandLength = document.getElementById('wand-length');
 const uniqueWandTraits = document.getElementById('unique-wand-traits');
 
-//get our applicant data from the api
-const form = formApi.get();
-console.log(form);
+//Get form name
+const searchParams = new URLSearchParams(window.location.search);
+const id = searchParams.get('name');
 
-//no applicant? no can do, head back to home page
+//Get our form data from the api
+const form = formApi.get(id);
+
+//No form filled out? no can do, head back to home page
 if(!form) {
     window.location = './';
 }
-//mediate data into the elements
+//Mediate data into the elements
 name.textContent = form.name;
 registryReason.textContent = form.registryReason.join(', ');
 lawfullyObtained.textContent = form.lawfullyObtained;
