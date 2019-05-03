@@ -21,7 +21,5 @@ wandRegistrationForm.addEventListener('submit', (event) => {
     formApi.save(form);
     //redirecting to the thank you page
     window.location.href = 'thank-you.html';
-    var audio = new Audio('./assets/hp-theme.mp3');
-    audio.play();
 });
 
