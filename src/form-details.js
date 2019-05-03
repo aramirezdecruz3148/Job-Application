@@ -18,9 +18,9 @@ const id = searchParams.get('name');
 const form = formApi.get(id);
 
 //No form filled out? no can do, head back to home page
-// if(!form) {
-//     window.location = './';
-// }
+if(!form) {
+    window.location = './';
+}
 //Mediate data into the elements
 name.textContent = form.name;
 registryReason.textContent = form.registryReason.join(', ');
