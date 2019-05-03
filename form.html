@@ -9,9 +9,12 @@
 </head>
 <body>
     <main>
-        <head>
-            <h1><img id="large-logo" src="assets/Ministry.png" alt="ministry of magic logo">Official Ministry form to register your wand</h1>
-        </head>
+        <header>
+            <h1>
+                <img id="large-logo" src="assets/Ministry.png" alt="ministry of magic logo">
+                Official Ministry form to register your wand
+            </h1>
+        </header>
         <form id="wand-registration-form">
             <section>
                 <p>
@@ -24,18 +27,18 @@
                     <legend>
                         Reason for registering your wand (please check all that apply):
                     </legend>
-                        <div>
-                            <input name="registry-reason" value="of-age" type="checkbox" id="of-age">
-                            <label for="registy-reason">Just came of age.</label>
-                        </div>
-                        <div>
-                            <input name="registry-reason" value="new-to-country" type="checkbox" id="new-to-country">
-                            <label for="registy-reason">I am new to the country.</label>
-                        </div>
-                        <div>
-                            <input name="registry-reason" value="new-wand" type="checkbox" id="new-wand">
-                            <label for="registy-reason">I purchased a new wand.</label>
-                        </div>
+                    <div>
+                        <input name="registry-reason" value="of-age" type="checkbox" id="of-age">
+                        <label for="registy-reason">Just came of age.</label>
+                    </div>
+                    <div>
+                        <input name="registry-reason" value="new-to-country" type="checkbox" id="new-to-country">
+                        <label for="registy-reason">I am new to the country.</label>
+                    </div>
+                    <div>
+                        <input name="registry-reason" value="new-wand" type="checkbox" id="new-wand">
+                        <label for="registy-reason">I purchased a new wand.</label>
+                    </div>
                 </fieldset>
             </section>
             <section>
@@ -48,10 +51,10 @@
                             <label for="lawfully-obtained">Yes.</label>
                         </div>
                         <div>
-                                <input name="lawfully-obtained" value="no" type="radio" id="no">
-                                <label for="lawfully-obtained">No.</label>
+                            <input name="lawfully-obtained" value="no" type="radio" id="no">
+                            <label for="lawfully-obtained">No.</label>
                         </div>
-                    </fieldset>
+                </fieldset>
             </section>
             <section>
                 <label class="wand-core" for="wand-core">What is the core of your wand?</label>
@@ -91,10 +94,11 @@
             </section>
             <section>
                 <h2>Check your answers are correct before submitting!</h2>
-                    <button id="submit-button">Send to the Ministry</button>
-                </section>
+                <button id="submit-button">Send to the Ministry</button>
+            </section>
         </form>
     </main>
     <script type="module" src="src/register.js"></script> 
+    <footer>Ministry of Magic</footer>
 </body>
 </html>

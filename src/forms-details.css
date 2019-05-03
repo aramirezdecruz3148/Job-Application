@@ -1,0 +1,28 @@
+table {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing:5em;
+    margin-top: 6%;
+    text-align: center;
+}
+
+thead {
+    font-weight: bolder;
+    color: white;
+    background: #37475F;
+}
+
+td {
+    padding: 8px 5px;
+    border: #CDA21F solid 3px;
+}
+
+tbody {
+    font-size: .8em;
+}
+
+footer {
+    margin-top: 5%;
+}

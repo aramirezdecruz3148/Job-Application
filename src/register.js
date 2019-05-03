@@ -3,6 +3,7 @@ import formApi from './form-api.js';
 //selecting nodes I want to use
 const wandRegistrationForm = document.getElementById('wand-registration-form');
 
+
 // echo range for wand length in numeric display
 const wandRange = document.getElementById('wand-length');
 const rangeDisplay = document.getElementById('range-display');
@@ -20,4 +21,7 @@ wandRegistrationForm.addEventListener('submit', (event) => {
     formApi.save(form);
     //redirecting to the thank you page
     window.location.href = 'thank-you.html';
+    var audio = new Audio('./assets/hp-theme.mp3');
+    audio.play();
 });
+
