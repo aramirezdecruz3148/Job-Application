@@ -1,5 +1,6 @@
-//Importing my formAPI utility object
+//Importing my formAPI utility object and refactored functions
 import formAPI from './form-api.js';
+import makeFormDetailRow from './make-form-detail-row.js';
 
 //Reference the table body DOM element
 const tBody = document.getElementById('forms');
@@ -10,29 +11,7 @@ const forms = formAPI.getAll();
 //Loop the list of applicants
 for(let i = 0; i < forms.length; i++) {
     const form = forms[i];
-    const tr = document.createElement('tr');
-
-    //For each applicant, construct a table row and append to the table body
-    const nameCell = document.createElement('td');
-    nameCell.textContent = form.name;
-    tr.appendChild(nameCell);
-
-    const registryReasonCell = document.createElement('td');
-    let registryReasonList = '';
-    if(form.registryReason) {
-        registryReasonList = form.registryReason.join(', ');
-    }
-    registryReasonCell.textContent = registryReasonList;
-    tr.appendChild(registryReasonCell);
-
-    const wandCoreCell = document.createElement('td');
-    wandCoreCell.textContent = form.wandCore;
-    tr.appendChild(wandCoreCell);
-
-    const wandWoodCell = document.createElement('td');
-    wandWoodCell.textContent = form.wandWood;
-    tr.appendChild(wandWoodCell);
-
+    const tr = makeFormDetailRow(form);
     tBody.appendChild(tr);
 }
 

@@ -1,5 +1,6 @@
 import getForm from './get-form.js';
 import formApi from './form-api.js';
+
 //selecting nodes I want to use
 const wandRegistrationForm = document.getElementById('wand-registration-form');
 
@@ -20,8 +21,6 @@ wandRegistrationForm.addEventListener('submit', (event) => {
     //replaced console log with a call to API object to save the API data
     formApi.save(form);
     //redirecting to the thank you page
-    window.location.href = 'thank-you.html';
-    var audio = new Audio('./assets/hp-theme.mp3');
-    audio.play();
+    window.location = 'thank-you.html';
 });
 

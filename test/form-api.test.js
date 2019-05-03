@@ -8,12 +8,14 @@ const testStorage = sessionStorage;
 test('round-trip form data', (assert) => {
     testStorage.removeItem('forms');
     // arrange
-    const form = { name: 'spongebob' };
+    const form1 = { name: 'tester1' };
+    const form2 = { name: 'tester2' };
     // act
-    formApi.save(form);
-    const result = formApi.get();
+    formApi.save(form1);
+    formApi.save(form2);
+    const result = formApi.get(form2.name);
     // assert
-    assert.deepEqual(result, form);
+    assert.deepEqual(result, form2);
 });
 
 test('no applicants in local storage, returns an empty array', (assert) => {

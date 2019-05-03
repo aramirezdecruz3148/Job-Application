@@ -10,11 +10,16 @@ const formApi = {
     //save to local storage
         formApi.storage.setItem('forms', json);
     },
-    get() {
+    get(name) {
     //use get all to fetch forms
         const forms = formApi.getAll(); 
     //return it
-        return forms[0];
+        for(let i = 0; i < forms.length; i++) {
+            const form = forms[i];
+            if(form.name === name) {
+                return form;
+            }
+        }
     },
     getAll() {
     //get from local storage
